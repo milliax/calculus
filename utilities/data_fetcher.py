@@ -5,5 +5,6 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 def downloader(url):
     res = requests.get(url,USER_AGENT)
-    return res
+    res.encoding = "big5"
 
+    return res.text
